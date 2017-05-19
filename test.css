@@ -1,0 +1,35 @@
+*{
+  font-family: 'Arvo', serif;
+}
+
+#navbar{
+  position:fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: .7;
+}
+
+#background0{
+  background-image: url("https://mgcreativedesign.files.wordpress.com/2014/11/website-design-background.png");
+  color: white;
+  background-size: cover;
+  height: 100%;
+}
+
+#main-title{
+  margin-top: 33vh;
+  margin-left: 14vw;
+  display: inline-block;
+}
+
+.customHr {
+    width: inherit;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0);
+    line-height: 1px;
+
+    background-color: grey;
+    margin-top: -6px;
+    margin-bottom: 10px;
+}
