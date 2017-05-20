@@ -17,6 +17,11 @@
   height: 100%;
 }
 
+#background1{
+  background-color: white;
+  color: black;
+}
+
 #main-title{
   margin-top: 33vh;
   margin-left: 14vw;
@@ -32,4 +37,9 @@
     background-color: grey;
     margin-top: -6px;
     margin-bottom: 10px;
+}
+
+.title{
+  margin-top: 10vh;
+  display: inline-block;
 }
