@@ -2,6 +2,11 @@
   font-family: 'Arvo', serif;
 }
 
+body{
+  height:100%;
+  position: relative;
+}
+
 #navbar{
   position:fixed;
   top: 0;
@@ -21,7 +26,12 @@
 #background1{
   background-color: white;
   color: black;
+}
 
+#background2{
+  background-position: bottom;
+  background-image: url(https://images.unsplash.com/photo-1422207258071-70754198c4a2);
+  height: 90vh;
 }
 
 #main-title{
@@ -53,10 +63,8 @@
 }
 
 hr{
-
   width:100%;
 }
-
 hr.style-eight {
     padding: 0;
     border: none;
@@ -81,4 +89,15 @@ hr.style-eight:after {
 
 .bottom-row{
   margin-bottom: 20vh;
+  width: inherit;
+}
+
+.caption{
+  margin-left: 45vw;
+  color:white;
+  min-width: 25vw;
+}
+
+.centered{
+  width: fit-content;
 }
