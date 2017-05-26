@@ -1,10 +1,11 @@
 *{
   font-family: 'Arvo', serif;
+
 }
 
 body{
   height:100%;
-  position: relative;
+  max-height: 100%;
 }
 
 #navbar{
@@ -31,6 +32,11 @@ body{
 #background2{
   background-position: bottom;
   background-image: url(https://images.unsplash.com/photo-1422207258071-70754198c4a2);
+  height: 90vh;
+}
+
+#background3{
+  background-position: bottom;
   height: 90vh;
 }
 
@@ -101,3 +107,18 @@ hr.style-eight:after {
 .centered{
   width: fit-content;
 }
+
+footer{
+  background-color: gray;
+}
+
+.footsy{
+  text-align: center;
+  padding: 2vh;
+}
+
+p {
+   margin: 0;
+   padding: 0;
+}
+
