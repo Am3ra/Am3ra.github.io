@@ -109,7 +109,7 @@ hr.style-eight:after {
 }
 
 footer{
-  background-color: gray;
+  background-color: #bbb;
 }
 
 .footsy{
@@ -118,7 +118,7 @@ footer{
 }
 
 p {
-   margin: 0;
-   padding: 0;
+  padding: 0;
+  margin: 0;
+  padding-top: 1vh;
 }
-
