@@ -129,6 +129,6 @@ p {
   display: inline-block;
 }
 
-.middle{
-  
+.wrong{
+  color: gray;
 }
