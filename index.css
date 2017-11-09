@@ -1,11 +1,14 @@
 *{
   font-family: 'Arvo', serif;
+  /*border:1px solid red; */
 }
 
 body{
   height:100%;
   max-height: 100%;
   margin-top: 0px;
+  padding-bottom:0;
+  margin-bottom: 0;
 }
 
 #navbar{
@@ -30,21 +33,30 @@ body{
 }
 
 #background2{
-  background-position: bottom;
+  background-size: cover;
   background-image: url(Coffee.png);
   min-height: 90vh;
   max-height: 90vh;
 }
+
 
 #background3{
   background-position: bottom;
   height: 90vh;
 }
 
+#background4{
+  max-height: 70vh;
+}
+
 #main-title{
   margin-top: 33vh;
   margin-left: 14vw;
   width: fit-content;
+}
+
+#intresnat{
+  max-width: 30vw;
 }
 
 .customHr {
@@ -112,6 +124,9 @@ footer{
 .footsy{
   text-align: center;
   padding: 2vh;
+  width: 100%;
+  position: bottom;
+
 }
 
 p {
