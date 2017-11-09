@@ -35,8 +35,7 @@ body{
 #background2{
   background-size: cover;
   background-image: url(Coffee.png);
-  min-height: 90vh;
-  max-height: 90vh;
+  height: 90vh;
 }
 
 
