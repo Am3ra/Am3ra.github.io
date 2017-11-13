@@ -124,6 +124,8 @@ hr.style-eight:after {
 footer{
   background-color: #bbb;
   margin-top: 5 vh;
+  position: absolute;
+  bottom: 0;
 }
 
 .footsy{
