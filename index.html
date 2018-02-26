@@ -1,269 +1,236 @@
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="https://avatars1.githubusercontent.com/u/17537489?v=3&u=60fe472a2ad75431c7ad748b70d85a142f5c7d98&s">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="index.js" charset="utf-8"></script>
-</head>
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
-<nav class="navbar navbar-inverse" id="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#background0"> Alan </a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#background1">Who I am</a></li>
-      <li><a href="#background2">Education</a></li>
-      <li><a href="#background4">Contact me!</a></li>
-    </ul>
-  </div>
-</nav>
+    body {
+        background-color: #f1f1f1;
+    }
 
-<body data-spy="scroll" data-target="#navbar" data-offset="10">
+    #regForm {
+        background-color: #ffffff;
+        margin: 100px auto;
+        font-family: Raleway;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+    }
 
-  <div class="container-fluid" id="background0">
-    <div id="main-title">
-      <h1>Alan Macedo Esparza</h1>
-      <hr>
-      <p>I am a programmer, photographer, and a curious person.</p>
-    </div>
-  </div>
+    h1 {
+        text-align: center;
+    }
 
-  <div class="container-fluid" id="background1">
-    <div class="title center-block">
-      <h2 class="text-center">Who am I?</h2>
-      <hr class="style-eight">
-    </div>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Where I've been:</h2>
-          <h4><i> Until today, I've done many things, however, these are the most important:</i></h4>
-          <div class="text-left">
-            <li>I've lived designed several sites for businesses, including tourism and dentistry.</li>
-            <li>Living in three countries in a 15 year period, learning to work in multicultural environments.</li>
-            <li>Overall, although I'm only 18 years old, I've been programming for 4, giving me plenty experience.</li>
-          </div>
+    input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+    }
+
+    /* Mark input boxes that gets an error on validation: */
+
+    input.invalid {
+        background-color: #ffdddd;
+    }
+
+    /* Hide all steps by default: */
+
+    .tab {
+        display: none;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 17px;
+        font-family: Raleway;
+        cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    #prevBtn {
+        background-color: #bbbbbb;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+
+    .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+    }
+
+    .step.active {
+        opacity: 1;
+    }
+
+    /* Mark the steps that are finished and valid: */
+
+    .step.finish {
+        background-color: #4CAF50;
+    }
+</style>
+
+<body>
+
+    <form id="regForm" action="/.php"method="post" enctype="multipart/form-data">
+        <h1>Select the type:</h1>
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">Type of API:
+            <label class="radio-inline">
+                <input type="radio" name="optradio" checked>Training
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio">Prediction
+            </label>
+            <br>
         </div>
-        <div class="col-md-6">
-          <h2>Where I am now:</h2>
-          <h4 class="text-left"><i>Today, I am a free-lance programmer, with a specialty in website design. Currently, I am studying a degree in computer sciences. Apart from programming, I have a deep interest in recent technologies such as VR and Hardware in general.</i></h4>
-        </div>
-      </div>
-      <div class="row container text-center middle">
-        <h2>Where I want to be: </h2>
-        <h4 class="text-center"><i> In 5 years, I see myself working at a startup or company, although in 15 I see myself already having my own.</i></h4>
-      </div>
-    </div>
-    <div class="title center-block text-center">
-      <h2 class="text-center">Skills:</h2>
-      <hr class="style-eight">
-    </div>
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-6 text-center">
-          <h2 class="text-center">Speaking Languages:</h2>
-          <div class="row container-fluid">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 text-justify">
-              <div>
-                <h4 class="justiffy">
-                  <i>English:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>Spanish:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>Portuguese:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>French:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
+        <div class="tab">Data Type
+            <div class="row">
+                <!-- <div class="col-2 flex-center" style="left:0%; position:relative;">
+                    <a>
+                        <img src="~/Scripts/AIPlatform/img/resources/txt.png" style="width: 180px;">
+                    </a>
+                </div>
+                <div class="col-2 flex-center" style="left:50%;position:relative;">
+                    <a>
+                        <img src="~/Scripts/AIPlatform/img/resources/xl.png" onclick="change()" style="width: 180px;">
+                    </a>
+                </div> -->
+                <label class="radio-inline">
+                    <input type="radio" name="dataType"value="EXCEL" checked>Excel
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="dataType"value="JSON">Json
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="dataType"value="TEXT">Text
+                </label>
+            
             </div>
-            <div class="col-md-3"></div>
-          </div>
         </div>
-        <div class="col-md-6 text-center">
-          <h2 class="text-center">Programming Languages:</h2>
-          <div class="row container-fluid">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 text-justify">
-              <div>
-                <h4 class="justiffy">
-                  <i>CSS/HTML:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>JavaScript:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>Python:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>C/C++:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
+        <div class="tab">Upload:
+            <div class="flex-center flex-column">
+                <section style="box-shadow: 0px 0px 1px 0px; border-radius: 5px; padding: 50px">
+                    <div>
+                        <h2 style="width: 600px; text-align: center;">
+                            <strong>Upload File</strong>
+                        </h2>
+                    </div>
+                    <br>
+                    <div>
+                        <h3 id="filenameid" style="width: 600px; text-align: center;"></h3>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="form1" class="form-control" style="width: 600px" placeholder="Data Column Number">
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="form2" class="form-control" style="width: 600px" placeholder="Class Column Number">
+                    </div>
+                    <div class="md-form">
+                        <input type="checkbox" id="header_ask"> Has header?
+                        <br>
+                    </div>
+                    <div class="col-12 flex-center">
+                        <label style="color: #fff" class="btn bg-primary btn-lg">UPLOAD
+                            <input class="robin-html-chooser" type="file" id="files" name="files[]" style="display: none;" multiple
+                            />
+                        </label>
+                    </div>
+                </section>
             </div>
-            <div class="col-md-3"></div>
-          </div>
         </div>
-      </div>
-      <div class="row bottom-row container text-center middle">
-        <h2>Other skills: </h2>
-        <h4 class="text-center">
-          Among other skills, I'm an experienced debater and speaker, winning regional and state competitions in Texas. Apart from this, throughout most of my schooling I have been a member of the student council and other leadership groups, giving me a strong background in teamwork and leadership.
-        </h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid" id="background2">
-    <h2 class="title caption">I work well, so you don't have to</h2>
-  </div>
-
-  <div class="container-fluid" id="background3">
-    <div class="title center-block">
-      <h2 class="text-center">My education:</h2>
-      <hr class="style-eight">
-    </div>
-
-    <!-- First website, weather, wikipedia viewer, random quote machine, Twitch API project -->
-    <div class="row text-center center-block">
-      <div class="col-md-6 text-center center-block">
-        <h2 class="text-center">Scholarly education:</h2>
-        <div class="col-md-3"></div>
-        <div class="col-md-7 text-justify">
-          <ul class="text-left">
-            <li>Currently studying Computer Sciences.</li>
-            <li>Completed International Baccalaureate Diploma</li>
-            <li>2 year degree including the following Higher Level courses:</li>
-            <ul class="text-left">
-              <li>Business Management</li>
-              <li>Design Technologies</li>
-              <li>Mathematics</li>
-              <li>Literature</li>
-              <li>Information Technologies</li>
-            </ul>
-          </ul>
+        <div style="overflow:auto;">
+            <div style="float:right;">
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+            </div>
         </div>
-        <div class="col-md-2"></div>
-      </div>
-      <div class="col-md-6 text-center">
-        <h2 class="text-center">Personal Education:</h2>
-        <div class="col-md-3"></div>
-        <div class="col-md-7 text-justify">
-          <ul>
-            <li><a href="https://www.freecodecamp.org/am3ra">Free Code Camp's </a>Front End Web Dev course (250 Hours currently)</li>
-            <li>Extensive work in front end development, doing work for various clients thus far</li>
-            <li>Python courses, leading to a good understanding of the language</li>
-            <li>Photography courses, 15 years of experience.</li>
-            <li>Competitive sailing!</li>
-          </ul>
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
         </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
-  </div>
+    </form>
 
-  <div class="container-fluid" id="background4">
-    <div class="title center-block">
-      <h2 class="text-center">Contact Me!</h2>
-      <hr class="style-eight">
-    </div>
-    <div class="center-block title" style="font-size:15vw;height:70vh; \">
-      <a href="https://www.facebook.com/jp2kk2" class="fa fa-facebook"></a>
-      <a href="https://twitter.com/jp2kk2" class="fa fa-twitter"></a>
-      <a href="https://plus.google.com/u/1/111486847434069060526" class="fa fa-google"></a>
-      <a href="https://www.linkedin.com/in/alan-macedo-esparza-194a42152/" class="fa fa-linkedin"></a>
-      <a href="https://www.github.com/am3ra" class="fa fa-github"></a>
-      <!--<a href="freecodecamp.com/am3ra" class="fa-free-code-camp fa" style="font-size:13vw;padding-top:30px;padding-bottom:30px;"></a> -->
-    </div>
-  </div>
+    <script>
+        var currentTab = 0; 
+        showTab(currentTab);
+        function showTab(n) {
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            var x = document.getElementsByClassName("tab");
+            if (n == 1 && !validateForm()) return false;
+            x[currentTab].style.display = "none";
+            currentTab = currentTab + n;
+            if (currentTab >= x.length) {
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            for (i = 0; i < y.length; i++) {
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    valid = false;
+                }
+            }
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; 
+        }
+
+        function fixStepIndicator(n) {
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            x[n].className += " active";
+        }
+    </script>
 
 </body>
 
-<footer>
-  <div class="footsy">
-    <img src="http://forthebadge.com/images/badges/built-with-love.svg" alt="I mean it!"></img>
-    <p>By Alan Macedo Esparza</p>
-  </div>
-</footer>
-
-<!-- WOW!
-
- .row.container-fluid>.col-md-3+.col-md-6.text-justify>div*4>h4.justiffy>i+.jiffy>span.glyphicon.glyphicon-plus-sign*5^^^^.col-md-3
-
-.container.center-block.text-center>.row>.col-md-4*3>h2>lorem4^h4.text-left>lorem10^^^.row>.col-md-6*2>h2.text-left>lorem4^h4>lorem10
+</html>
