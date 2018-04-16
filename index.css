@@ -23,7 +23,7 @@ body{
   background-image: url("https://mgcreativedesign.files.wordpress.com/2014/11/website-design-background.png");
   color: white;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   background-position: bottom;
 }
 
