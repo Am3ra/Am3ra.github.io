@@ -1,0 +1,62 @@
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+
+<body style="background-color:#000; color:white;">
+
+    <h1 class="text-center">Alan's weather service! </h1>
+
+    <div class="container-fluid text-center cool center-block border" id="h135">
+        <h3 class="changeThis"> not working </h3>
+    </div>
+
+    <script>$(document).ready(function () {
+
+            function titleCase(str) {
+                return str.split(' ').map(function (val) {
+                    return val.charAt(0).toUpperCase() + val.substr(1).toLowerCase();
+                }).join(' ');
+            }
+
+            function convertToF(celsius) {
+                var fahrenheit;
+                fahrenheit = (celsius * (9 / 5)) + 32;
+                return fahrenheit.toPrecision(2);
+            }
+
+            $("#infoshido").hide();
+
+            $.get("http://ipinfo.io", function (response) {
+
+                city = response.city;
+                region = response.region;
+                country = response.country;
+                coords = response.loc;
+                telecom = response.org;
+                ip = response.ip;
+
+                var url = "http://api.openweathermap.org/data/2.5/weather?lat=" + response.loc.split(",")[0] + "&lon=" + response.loc.split(",")[1] + "&units=metric&appid=1b0220fe37e22fd9e7698dbc40be50a0";
+
+
+                $.getJSON(url, function (data) {
+                    var description = titleCase(data.weather[0].description);
+
+                    var letter = "<div class='toggle' >" + data.main.temp.toPrecision(3) + "° <a id='cel' href='#'>C</a></div><div id='far' class='toggle'>" + convertToF(data.main.temp) + "° <a  href='#'>F</a></div>"
+
+                    var image = "<div><img style='width:100px;'src= 'http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'></div>";
+
+
+
+                    $(".changeThis").html(city + ", " + region + "<br><br>" + description + "<br><br>" + letter + "<br><br>" + image);
+
+                    $("#far").hide();
+                    $('.toggle').click(function () {
+                        $('.toggle').toggle();
+                    });
+
+                });
+
+
+            }, "jsonp") // end of IPINFO
+
+        });</script>
+</body>

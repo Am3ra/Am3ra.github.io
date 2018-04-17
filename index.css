@@ -38,6 +38,25 @@ body{
   height: 90vh;
 }
 
+#background2_5{
+  padding-bottom: 10vh;
+}
+
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.projectContainer{
+  margin-top: 5vh;
+}
+
+iframe{
+  width: 350px;
+}
 
 #background3{
   background-position: bottom;
