@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="index.js"></script> -->
+    <link rel="stylesheet" href="index.css">
+    <title>ILYS clone <3</title>
+</head>
+
+<body>
+    <div class="all">
+        <h1 id="number"> </h1>
+        <input type="text" onkeypress="pressKey()" id="myInput" onblur="this.focus()" autofocus>
+        <textarea type="text" id="text" onkeypress="pressKey2()"></textarea>
+        <div class="buttons">
+            <button type="button" onclick="clearA()">Clear Text</button>
+            <button type="button" onclick='toggleMe()'>Click Me to toggle text!</button>
+            <button type="button" onclick="copy()">Copy Text</button>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("myInput").focus();
+    var a = "",
+        b;
+
+    function pressKey() {
+        a += document.getElementById('myInput').value;
+        document.getElementById('myInput').value = "";
+
+        document.getElementById("number").innerHTML = "" + a.split(" ").length;
+    }
+
+    function pressKey2() {
+        a = document.getElementById('text').value;
+        document.getElementById("number").innerHTML = "" + a.split(" ").length;
+    }
+
+    function toggleMe() {
+        a += document.getElementById('myInput').value;
+        document.getElementById('text').value = a;
+        document.getElementById('myInput').style.display = document.getElementById('myInput').style.display == "none" ?
+            "block" :
+            "none";
+        document.getElementById('myInput').focus();
+        document.getElementById('text').style.display = document.getElementById('text').style.display == "block" ?
+            "none" : "block";
+
+    }
+
+    function clearA() {
+        a = "";
+        document.getElementById('myInput').value = "";
+        document.getElementById('text').value = "";
+
+        document.getElementById("number").innerHTML = 0;
+        if (document.getElementById('text').style.display == "block") {
+            toggleMe();
+        }
+    }
+
+    function copy() {
+        document.getElementById('text').value = a;
+        var copyText = document.getElementById("text");
+        copyText.select();
+        document.execCommand("Copy");
+        if (document.getElementById('text').style.display != "block") {
+            window.clipboardData.setData('Text', a);
+            alert(a);
+        }
+
+    }
+</script>
+
+</html>

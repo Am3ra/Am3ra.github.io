@@ -1,0 +1,42 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.all {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0, auto;
+}
+
+#myInput {
+    width: 500px;
+    text-align: center;
+    background-color: #000;
+    border: 0;
+    color: forestgreen;
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+#myInput:focus,
+#text:focus {
+    outline: none;
+}
+
+#text {
+    display: none;
+    background-color: #000;
+    border: 0;
+    font-size: 30px;
+    color: #fff;
+    width: 80vh;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 40vh;
+}
