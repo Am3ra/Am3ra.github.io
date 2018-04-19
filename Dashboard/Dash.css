@@ -1,0 +1,276 @@
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.left {
+    width: 210px;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.logo{
+    background-image: url(uocube.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+
+h2 {
+    margin: 0;
+  
+}
+
+h3 {
+    margin: 0;
+    
+    width: 120px;
+    height: 25px;  
+}
+
+h4{
+    padding-left: 50px;
+}
+
+img{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin-left:  60px;
+}
+    
+
+
+ul {
+    list-style-type: none;
+    color: #717070;
+    padding-left: 0px;
+}
+
+li:hover {
+    cursor: pointer;
+    color: black;
+}
+
+li {
+    display: flex;
+    width: 90%;
+    padding: 15px;
+}
+li i,li svg{
+    width: 10px;
+    margin-right: 10px;
+}
+
+.fa-home:hover {
+    cursor: pointer;
+}
+
+.fa-user:hover {
+    cursor: pointer;
+}
+
+.fa-chevron-right {
+    margin-left: auto;
+}
+
+.todo {
+    margin-left: 250px;
+    background-color: #ECF0F3;
+}
+
+.todo2 {
+    margin: 30px;
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    background-color: #424858;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box; 
+    color: white;  
+}
+.header > *{
+    margin-right: 30px;
+}
+
+
+.mail {
+    margin-left: auto;
+}
+
+.row1 {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.element1 {
+    width: 270px;
+    height: 130px;
+    background-color: white;
+    border-radius: 5px;
+    color: #E73555;
+}
+
+.element2 {
+    width: 270px;
+    height: 130px;
+    background-color: #78BF85;
+    border-radius: 5px;
+    color: white;
+}
+
+.element3 {
+    width: 270px;
+    height: 130px;
+    background-color: white;
+    border-radius: 5px;
+    color: #FBBA47;
+}
+
+.element4 {
+    width: 270px;
+    height: 130px;
+    background-color: #0597A6;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+.toprow {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.text {
+    margin-left: auto;
+}
+
+.bottomRow {
+    display: flex;
+    margin: 20px;
+}
+
+.bottomRow :nth-child(2) {
+    margin-left: auto;
+}
+
+.row2 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+
+.graph1 {
+    flex: 1;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column;
+    margin-right: 4%;
+}
+
+.graph2 {
+    flex: 1;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.title {
+    margin: 15px;
+}
+
+.info {
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+canvas{
+    width: 100%;
+
+}
+
+.row3 {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: 3%;
+    margin-bottom: 35px;
+}
+
+.part1 {
+    flex: 2;
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 4%;
+    box-sizing: border-box;
+}
+
+.part2 {
+    flex: 1;
+    background-color: white;
+    border-radius: 5px;
+    
+}
+
+table {
+    width: 100%;
+    padding: 50px;
+}
+
+th{
+    border-top: 1px solid hsla(100, 0%, 0%, 0.1);
+    padding: 9px;
+}
+
+td {
+    border-top: 1px solid #dddddd;
+    padding: 9px;
+}
+
+tr {
+    background-color: #fff;
+}
+
+table.table tr:hover td {
+    cursor: default;
+    background-color: #ECF0F3;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #FAFAFA;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+.cooliob{
+    width: 150px;
+    border-radius: 0;
+}
+
+.shadow {
+    box-shadow: 4px 8px 18px 0 #00000033;
+}

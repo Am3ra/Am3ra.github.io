@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <link rel="stylesheet" href="Dash.css">
+    <script src="dashboard.js"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="left shadow">
+        <h3 class="logo" style="margin:10px auto 50px "></h3>
+        <img src="avatar-6.jpg" alt="" class="profile">
+        <h4>Steven Mayers</h4>
+        <small>Main Menu:</small>
+        <ul>
+            <li>
+                <i class="fas fa-home"></i>
+                Dashboard
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-lightbulb"></i>
+                User interface
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-chess-queen"></i>
+                Advanced UI
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-paint-brush"></i>Icons
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-pen-square"></i>Forms
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-chart-pie"></i>
+                Charts
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-table"></i>
+                Tables
+                <i class="fas fa-chevron-right"></i>
+            </li>
+        </ul>
+        <small>Extra</small>
+        <ul>
+            <li>
+                <i class="fas fa-map"></i>
+                Maps
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-calendar"></i>
+                Calendar
+                <i class="fas fa-chevron-right"></i>
+            </li>
+            <li>
+                <i class="fas fa-file"></i>Pages
+                <i class="fas fa-chevron-right"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="todo">
+        <div class="header shadow">
+            <div class="dashboard">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="mail">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="pic">
+                <i class="fas fa-user"></i>
+            </div>
+
+        </div>
+        <div class="todo2">
+            <div class="row1">
+                <div class="element1 shadow">
+                    <div class="toprow">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="text">
+                            <h2>15852</h2>
+                            <small>Total Sales</small>
+                        </div>
+                    </div>
+                    <div class="bottomRow">
+                        <small>Total income: $22506</small>
+                        <small>
+                            <i class="fas fa-chevron-up"></i>10.25%</small>
+                    </div>
+                </div>
+                <div class="element2 shadow">
+                    <div class="toprow">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div class="text">
+                            <h2>956</h2>
+                            <small>New Orders</small>
+                        </div>
+                    </div>
+                    <div class="bottomRow">
+                        <small>Total income: $22506</small>
+                        <small>
+                            <i class="fas fa-chevron-up"></i>10.25%</small>
+                    </div>
+                </div>
+                <div class="element3 shadow">
+                    <div class="toprow">
+                        <i class="fas fa-cube"></i>
+                        <div class="text">
+                            <h2>5210</h2>
+                            <small>New Users</small>
+                        </div>
+                    </div>
+                    <div class="bottomRow">
+                        <small>Total income: $22506</small>
+                        <small>
+                            <i class="fas fa-chevron-up"></i>10.25%</small>
+                    </div>
+                </div>
+                <div class="element4 shadow">
+                    <div class="toprow">
+                        <i class="fas fa-bold"></i>
+                        <div class="text">
+                            <h2>20544</h2>
+                            <small>Unique Visitors</small>
+                        </div>
+                    </div>
+                    <div class="bottomRow">
+                        <small>Total income: $22506</small>
+                        <small>
+                            <i class="fas fa-chevron-up"></i>10.25%</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="graph1 shadow">
+                    <div class="title">Email Sent</div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>
+                                <strong>3652</strong>
+                            </h2>
+                            <small>Marketplace</small>
+                        </div>
+                        <div class="data">
+                            <h2>
+                                <strong>3652</strong>
+                            </h2>
+                            <small>Marketplace</small>
+                        </div>
+                        <div class="data">
+                            <h2>
+                                <strong>3652</strong>
+                            </h2>
+                            <small>Marketplace</small>
+                        </div>
+                    </div>
+                    <canvas id="bar-chart"></canvas>
+                </div>
+                <div class="graph2 shadow">
+                    <div class="title">Revenue</div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>
+                                <strong>3652</strong>
+                            </h2>
+                            <small>Marketplace</small>
+                        </div>
+                        <div class="data">
+                            <h2>
+                                <strong>3652</strong>
+                            </h2>
+                            <small>Marketplace</small>
+                        </div>
+                        <div class="data">
+                            <h2>
+                                <strong>3652</strong>
+                            </h2>
+                            <small>Marketplace</small>
+                        </div>
+                    </div>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="part1 shadow">
+                    <div class="title">Recent Candidates</div>
+
+                    <table class="table" cellspacing="0">
+                        <thead class="topheader">
+                            <tr>
+                                <th align="left">Name</th>
+                                <th align="left">Position</th>
+                                <th align="left">Status</th>
+                                <th align="left">Age</th>
+                                <th align="left">Start date</th>
+                                <th align="left">Salary</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tiger Nixon</td>
+                                <td>System Architect</td>
+                                <td>
+                                    <span class="badge badge-info">Active</span>
+                                </td>
+                                <td>61</td>
+                                <td>2011/04/25</td>
+                                <td>$320,800</td>
+                            </tr>
+                            <tr>
+                                <td>Garrett Winters</td>
+                                <td>Accountant</td>
+                                <td>
+                                    <span class="badge badge-info">Active</span>
+                                </td>
+                                <td>63</td>
+                                <td>2011/07/25</td>
+                                <td>$170,750</td>
+                            </tr>
+                            <tr>
+                                <td>Ashton Cox</td>
+                                <td>Junior Technical Author</td>
+                                <td>
+                                    <span class="badge badge-info">Active</span>
+                                </td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric Kelly</td>
+                                <td>Senior Javascript Developer</td>
+                                <td>
+                                    <span class="badge badge-default">Deactive</span>
+                                </td>
+                                <td>22</td>
+                                <td>2012/03/29</td>
+                                <td>$433,060</td>
+                            </tr>
+                            <tr>
+                                <td>Airi Satou</td>
+                                <td>Accountant</td>
+                                <td>
+                                    <span class="badge badge-info">Active</span>
+                                </td>
+                                <td>33</td>
+                                <td>2008/11/28</td>
+                                <td>$162,700</td>
+                            </tr>
+                            <tr>
+                                <td>Brielle Williamson</td>
+                                <td>Integration Specialist</td>
+                                <td>
+                                    <span class="badge badge-info">Active</span>
+                                </td>
+                                <td>61</td>
+                                <td>2012/12/02</td>
+                                <td>$372,000</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="part2 shadow">
+                    <div class="title">Monthly Earnings</div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>
+                                <strong>3654</strong>
+                            </h2>
+                            <small>Marketplace</small>
+                        </div>
+                        <div class="data">
+                            <h2>
+                                <strong>954</strong>
+                            </h2>
+                            <small>Last week</small>
+                        </div>
+                        <div class="data">
+                            <h2>
+                                <strong>8462</strong>
+                            </h2>
+                            <small>Last Month</small>
+                        </div>
+                    </div>
+                    <canvas id="doughnut-chart"></canvas>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img class="cooliob" src="https://forthebadge.com/images/badges/built-with-love.svg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
