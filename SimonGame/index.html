@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <title>Simon Game</title>
 </head>
 
@@ -19,9 +20,11 @@
         <div class="center section">
             <h2 class="centerize">SIMON®</h2>
             <h3 class="counter">--</h3>
-            <div class="button1"></div>
-            <div class="button2"></div>
+            <div class="button1" onclick="startGame ()"></div>
+            <div class="button2" onclick="strictClick()"></div>
             <div class="light"></div>
+            <h3 class="label1">START</h3>
+            <h3 class="label2">STRICT</h3>
         </div>
     </div>
 </body>
