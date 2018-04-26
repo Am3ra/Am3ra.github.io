@@ -1,8 +1,15 @@
-var STRICT = false;
+var STRICT = false,started = false;
 
-
+function wasClicked(className) {
+    console.log(className);
+}
 
 async function startGame() {
+    if (started) {
+        return;
+    } else {
+        started=true;
+    }
     var numbs = [];
     var total = 1,
         padded = "",
@@ -17,7 +24,10 @@ async function startGame() {
         document.getElementsByClassName("counter")[0].innerHTML=padded;
         numbs=generateSelection(numbs);
         
-        if (total>=15) {
+        if (total >20) {
+            alert("you WON!");
+            break;
+        } else if (total>=15) {
             duration = 500;
         } else if(total >=13) {
             duration = 900;
@@ -26,6 +36,7 @@ async function startGame() {
         }
 
         for (i in numbs) {
+            await sleep(duration/2);
             console.log("cool=", numbs[i]);
             switch (numbs[i]) {
                 case 0:
@@ -50,9 +61,11 @@ async function startGame() {
                     break;
             }
         }
+
+        
         
         total++;
-        break;
+       
     }
 }
 
