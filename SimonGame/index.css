@@ -1,0 +1,140 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+:root{
+    --container-width:55%;
+}
+
+html {
+    background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+}
+
+.centerize{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 900;
+    font-size: 400%;
+    margin-top: 15%;
+    color: #333333;
+}
+
+.container {
+    background-color: #333333;
+    width: 40vw;
+    height: 40vw;
+    position: relative;
+    border-radius: 100%;
+    margin: 5% auto;
+}
+
+.section {
+    border: 15px solid #333;
+}
+
+.tr {
+    border-top-right-radius: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    background-color: red;
+    width: 45%;
+    height: 45%;
+}
+
+.tl {
+    border-top-right-radius: 0;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    background-color: green;
+    width: 45%;
+    height: 45%;
+}
+
+.bl {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 0;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    background-color: yellow;
+    width: 45%;
+    height: 45%;
+}
+
+.br {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: blue;
+    width: 45%;
+    height: 45%;
+}
+
+.center {
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 100%;
+    background-color: #ccc;
+    width: var(--container-width);
+    height: var(--container-width);
+    align-self: center;
+    top: calc(50% - var(--container-width)/2);
+    left: calc(50% - var(--container-width)/2);
+}
+
+.counter{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    background-color: rgb(89, 1, 1);
+    color: rgb(235, 1, 1);
+    font-size: 300%;
+    padding: 1% 6%;
+    border-radius: 20%;
+    font-family: 'VT323',
+    monospace;
+    border: 5px solid rgb(96, 96, 96);
+}
+
+.button1{
+    width: 15%;
+    height: 15%;
+    border-radius: 100%;
+    background-color: red ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 10px solid #333;
+    box-sizing: border-box;
+    
+}
+.button2{
+    width: 15%;
+    height: 15%;
+    border-radius: 100%;
+    background-color: yellow ;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    border: 10px solid #333;
+    box-sizing: border-box;
+}
