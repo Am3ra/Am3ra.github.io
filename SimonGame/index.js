@@ -17,48 +17,45 @@ async function startGame() {
         document.getElementsByClassName("counter")[0].innerHTML=padded;
         numbs=generateSelection(numbs);
         
-        if (counter>=15) {
+        if (total>=15) {
             duration = 500;
-        } else if(counter >=13) {
+        } else if(total >=13) {
             duration = 900;
-        } else if(counter >=9){
+        } else if(total >=9){
             duration = 1200;
         }
 
-        showOrder(numbs);
+        for (i in numbs) {
+            console.log("cool=", numbs[i]);
+            switch (numbs[i]) {
+                case 0:
+                    document.getElementsByClassName("tr")[0].style.backgroundColor = "rgb(221, 0, 0)";
+                    await sleep(duration);
+                    document.getElementsByClassName("tr")[0].style.backgroundColor = "rgb(150, 0, 0)";
+                    break;
+                case 1:
+                    document.getElementsByClassName("tl")[0].style.backgroundColor = "rgb(0, 220, 0)";
+                    await sleep(duration);
+                    document.getElementsByClassName("tl")[0].style.backgroundColor = "rgb(0, 103, 0)";
+                    break;
+                case 2:
+                    document.getElementsByClassName("bl")[0].style.backgroundColor = "rgb(250, 250, 0)";
+                    await sleep(duration);
+                    document.getElementsByClassName("bl")[0].style.backgroundColor = "rgb(177, 177, 0)";
+                    break;
+                case 3:
+                    document.getElementsByClassName("br")[0].style.backgroundColor = "rgb(0, 0, 220)";
+                    await sleep(duration);
+                    document.getElementsByClassName("br")[0].style.backgroundColor = "rgb(0, 0, 159)";
+                    break;
+            }
+        }
         
         total++;
         break;
     }
 }
 
-function showOrder(numbs) {
-    for (i in numbs) {
-        console.log("cool=", numbs[i]);
-        switch (numbs[i]) {
-            case 0:
-                document.getElementsByClassName("tr")[0].style.backgroundColor = "rgb(221, 0, 0)";
-                await sleep(duration);
-                document.getElementsByClassName("tr")[0].style.backgroundColor = "rgb(150, 0, 0)";
-                break;
-            case 1:
-                document.getElementsByClassName("tl")[0].style.backgroundColor = "rgb(0, 220, 0)";
-                await sleep(duration);
-                document.getElementsByClassName("tl")[0].style.backgroundColor = "rgb(0, 103, 0)";
-                break;
-            case 2:
-                document.getElementsByClassName("bl")[0].style.backgroundColor = "rgb(250, 250, 0)";
-                await sleep(duration);
-                document.getElementsByClassName("bl")[0].style.backgroundColor = "rgb(177, 177, 0)";
-                break;
-            case 3:
-                document.getElementsByClassName("br")[0].style.backgroundColor = "rgb(0, 0, 220)";
-                await sleep(duration);
-                document.getElementsByClassName("br")[0].style.backgroundColor = "rgb(0, 0, 159)";
-                break;
-        }
-    }
-}
 
 function strictClick() {
     var element = document.getElementsByClassName("light")[0].style;
