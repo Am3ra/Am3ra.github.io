@@ -6,4 +6,15 @@ $(document).ready(function () {
     $('.btn-group .btn input').on('change', function () {
         alert(this.id);
     });
+    for (i in channels){
+        $.getJSON(url+channels[i],function(data) {
+            console.log(data);
+            status[i] = data
+            if (data.stream) {
+                alert(channels[i] + "is Active");
+            }
+        })
+    }
+    
+    
 });
