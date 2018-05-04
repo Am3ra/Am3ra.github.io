@@ -5,3 +5,10 @@
     background-color: #ccc;
     padding-top: 2vh;
 }
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
