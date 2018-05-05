@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Pomodoro Timer</title>
+</head>
+
+<body>
+    <h1>Pomodoro Clock timer</h1>
+    <div class="container">
+        <textarea name="timerBody" id="timerBody" cols="6" rows="1">25:00</textarea>
+        <button class="button button1" onclick="startCountDown()">Start timer</button>
+        <button class="button button2" onclick="clearInterval(timer);on=0;">Stop timer</button>
+        <button class="button button3" onclick="resetTimer()">Reset</button>
+    </div>
+</body>
+
+</html>
