@@ -21,6 +21,7 @@ function countDown(){
     console.log(time);
     if (time==0) {
         clearInterval(timer);
+        new Audio("alert2.mp3").play();
     }
     
     document.getElementById("timerBody").value=secondsToMinutes(time);
