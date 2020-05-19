@@ -1,0 +1,70 @@
+html{
+    min-height: 300vh;
+}
+
+.logo {
+    height: auto;
+    width: 20vw;
+}
+
+.main {
+    display: flex;
+    margin-top: 15vh;
+    background-color: #fff;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15vh;
+}
+
+.tab1 {
+    background-color: #88d883;
+}
+.tab{
+    cursor:pointer;
+    padding: 10px;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.info{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input{
+    margin-bottom: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons>*{
+    margin-bottom: 30px     ;
+}
+
+.npv{
+    background-color: #e37222;
+}
+
+.payback{
+    background-color: #78c0cb;
+}
+
+.rows{
+    padding: 5% 10%;
+
+}
+
+.calculator{
+    padding-top: 5%;
+    display: none;
+}
