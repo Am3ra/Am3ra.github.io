@@ -11,7 +11,7 @@ var rowPayback = `
         <div class="input-group-prepend">
             <span class="input-group-text">$</span>
         </div>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" min="0" value="0" required>
         <div class="input-group-append">
             <span class="input-group-text">.00</span>
         </div>
@@ -20,7 +20,7 @@ var rowPayback = `
         <div class="input-group-prepend">
             <span class="input-group-text">$</span>
         </div>
-        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" min="0" value="0" required>
         <div class="input-group-append">
             <span class="input-group-text">.00</span>
         </div>
@@ -29,7 +29,7 @@ var rowPayback = `
         <div class="input-group-prepend">
             <span class="input-group-text">$</span>
         </div>
-        <input readonly type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <input readonly type="text" class="form-control" aria-label="Amount (to the nearest dollar)" min="0" value="0" required>
         <div class="input-group-append">
             <span class="input-group-text">.00</span>
         </div>
@@ -195,3 +195,25 @@ function getNPV(tazaInt, principal, cashFlows) {
     return npv;
 }
 
+function calculatePayback(){
+    //get principal, tax
+    var principal = $("#PrincipalPayback").val();
+    var tax = $("#TazaPayback").val();
+    var found = false;
+    $(".payback-rows>.whole_row").each(function(i,element){
+        var inputs = $(element).children("div").children("input");
+        var outflow = inputs.eq(0).val();
+        var inflow = inputs.eq(1).val();
+        var total_flow=(inflow-outflow)/Math.pow(1+(tax/100),i);
+        principal -= total_flow;
+        if(-principal >= 0 && !found){
+            alert(i+" is first break even period");
+            found = true;
+        }
+        console.log(inputs.eq(2).val(""+-principal));
+        
+        // inputs.eq(2).value(inflow-outflow);
+        // console.log($(element).children("div").children("input").eq(1).val());
+    });
+    // console.log($(".payback-rows>.whole_row>div>input").eq(0).val());
+}

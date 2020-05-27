@@ -52,10 +52,10 @@
                     <label for="PrincipalPayback">Principal amount:</label>
                     <input type="number" name="Principal" id="PrincipalPayback" value="1" required>
                     <label for="TazaPayback">Taza de interes:</label>
-                    <input type="number" name="TazaInteres" id="TazaPayback" min="0" value="7" required>
+                    <input type="number" name="TazaInteres" id="TazaPayback" min="0" value="0" required>
                 </div>
                 <div class="payback buttons">
-                    <button onclick="getPayback()" class="btn btn-primary">Calcular</button>
+                    <button onclick="calculatePayback()" class="btn btn-primary">Calcular</button>
                     <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
                 </div>
             </div>
@@ -121,10 +121,10 @@
                     <input type="number" name="salvage" id="salvagedepreciation" min="0" value="0" required>
                     <label for="sel1">Categoria Depreciacion:</label>
                     <select class="form-control" id="sel1">
-                        <option>1</option>
-                        <option>2</option>
                         <option>3</option>
-                        <option>4</option>
+                        <option>5</option>
+                        <option>8</option>
+                        <option>10</option>
                     </select>
                 </div>
                 <div class="depreciation buttons">
