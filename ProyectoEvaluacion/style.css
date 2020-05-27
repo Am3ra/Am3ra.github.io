@@ -58,6 +58,9 @@ input{
 .payback{
     background-color: #78c0cb;
 }
+.depreciation{
+    background-color: #4db590;
+}
 
 .rows{
     padding: 5% 10%;
@@ -67,4 +70,26 @@ input{
 .calculator{
     padding-top: 5%;
     display: none;
+}
+
+.whole_row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headers{
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-evenly;
+}
+
+.headers h2{
+    margin: 0 auto;
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: bolder;
 }

@@ -59,6 +59,11 @@
                     <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
                 </div>
             </div>
+            <div class="headers">
+                <h2>Outflows</h2>
+                <h2>Inflows</h2>
+                <h2>Cumulative cash</h2>
+            </div>
             <div class="payback-rows rows">
 
             </div>
@@ -72,20 +77,79 @@
                     <label for="PrincipalNPV">Principal amount:</label>
                     <input type="number" name="Principal" id="PrincipalNPV" value="1" required>
                     <label for="TazaNPV">Taza de interes:</label>
-                    <input type="number" name="TazaInteres" id="TazaNPV" min="0" value="7" required>
+                    <input type="number" name="TazaInteres" id="TazaNPV" min="0" value="0" required>
+                    <label for="ImpuestoNPV">Impuesto:</label>
+                    <input type="number" name="ImpuestoNPV" id="ImpuestoNPV" min="0" value="0" required>
+                    <label for="InflacionNPV">Inflacion:</label>
+                    <input type="number" name="InflacionNPV" id="InflacionNPV" min="0" value="0" required>
                 </div>
                 <div class="NPV buttons">
                     <button class="btn btn-primary">Calcular</button>
                     <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
                 </div>
             </div>
+            <div class="headers">
+                <h2>Outflows</h2>
+                <h2>Inflows</h2>
+                <h2>Cumulative cash</h2>
+                <h2>Present Value</h2>
+            </div>
             <div class="NPV-rows rows">
 
             </div>
+
+            <div class="results">
+                <label for="result">NPV:</label>
+                <input readonly type="number" name="result" id="resultNPV">
+            </div>
         </div>
-        <div class="calculator"></div>
-        <div class="calculator"></div>
-        <div class="calculator"></div>
+        <div class="checklist calculator">
+
+        </div>
+        <div class="depreciation calculator">
+            <div class="info">
+                <div class="campos">
+                    <label for="PeriodoNPV">Numero de periodos:</label>
+                    <input type="number" name="Periodos" id="Periododepreciation" class="periodsInput" min="1" value="1"
+                        required>
+                    <label for="Principaldepreciation">Principal amount:</label>
+                    <input type="number" name="Principal" id="Principaldepreciation" value="1" required>
+                    <label for="Impuestodepreciation">Impuesto:</label>
+                    <input type="number" name="Impuestodepreciation" id="Impuestodepreciation" min="0" value="0"
+                        required>
+                    <label for="salvage">Salvage Value:</label>
+                    <input type="number" name="salvage" id="salvagedepreciation" min="0" value="0" required>
+                    <label for="sel1">Categoria Depreciacion:</label>
+                    <select class="form-control" id="sel1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="depreciation buttons">
+                    <button class="btn btn-primary">Calcular Straight Line</button>
+                    <button class="btn btn-primary">Calcular MACRS</button>
+                    <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
+                </div>
+            </div>
+            <div class="headers">
+                <h2>DepRate</h2>
+                <h2>AnnualDep</h2>
+                <h2>Acc. Dep</h2>
+                <h2>Ledger Val</h2>
+                <h2>Tax per Year</h2>
+            </div>
+            <div class="depreciation-rows rows">
+
+            </div>
+
+            <!-- <div class="results">
+                <label for="result">:</label>
+                <input readonly type="number" name="result" id="resultNPV" >
+            </div> -->
+        </div>
+        <div class="PSM calculator"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
