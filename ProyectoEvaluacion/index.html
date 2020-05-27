@@ -24,11 +24,11 @@
             <h3>Nombre evaluador: </h3>
         </div>
     </div>
-    <div class="tabs container">
+    <div class="tabs">
         <div class="payback tab">
             <h2>Payback Period</h2>
         </div>
-        <div class="npv tab">
+        <div class="NPV tab">
             <h2>NPV</h2>
         </div>
         <div class="checklist tab">
@@ -47,22 +47,42 @@
             <div class="info">
                 <div class="campos">
                     <label for="PeriodoPayback">Numero de periodos:</label>
-                    <input type="number" name="Periodos" id="Periodopayback" class="periodsInput"min="1" value="1" required>
+                    <input type="number" name="Periodos" id="Periodopayback" class="periodsInput" min="1" value="1"
+                        required>
                     <label for="PrincipalPayback">Principal amount:</label>
                     <input type="number" name="Principal" id="PrincipalPayback" value="1" required>
                     <label for="TazaPayback">Taza de interes:</label>
-                    <input type="number" name="TazaInteres" id="TazaPayback" min="0" value="7"required>
+                    <input type="number" name="TazaInteres" id="TazaPayback" min="0" value="7" required>
                 </div>
                 <div class="payback buttons">
-                    <button class="btn btn-primary">Calcular</button>
-                    <button class="btn btn-secondary">Limpiar datos</button>
+                    <button onclick="getPayback()" class="btn btn-primary">Calcular</button>
+                    <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
                 </div>
             </div>
             <div class="payback-rows rows">
 
             </div>
         </div>
-        <div class="npv calculator"></div>
+        <div class="NPV calculator">
+            <div class="info">
+                <div class="campos">
+                    <label for="PeriodoNPV">Numero de periodos:</label>
+                    <input type="number" name="Periodos" id="PeriodoNPV" class="periodsInput" min="1" value="1"
+                        required>
+                    <label for="PrincipalNPV">Principal amount:</label>
+                    <input type="number" name="Principal" id="PrincipalNPV" value="1" required>
+                    <label for="TazaNPV">Taza de interes:</label>
+                    <input type="number" name="TazaInteres" id="TazaNPV" min="0" value="7" required>
+                </div>
+                <div class="NPV buttons">
+                    <button class="btn btn-primary">Calcular</button>
+                    <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
+                </div>
+            </div>
+            <div class="NPV-rows rows">
+
+            </div>
+        </div>
         <div class="calculator"></div>
         <div class="calculator"></div>
         <div class="calculator"></div>

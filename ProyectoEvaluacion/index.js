@@ -21,11 +21,8 @@ var rows= {};
 
 $(".periodsInput").change(function () { 
     var parentType = findParentType($(this));
-    // alert(parentType);
-    if(document.getElementById("Periodo"+parentType).checkValidity()){
-        // alert($(this).val());
+    if(document.getElementById("Periodo"+parentType).checkValidity())
         changeRows(parentType,$(this).val());
-    }
 });
 
 function findParentType(element){
@@ -56,4 +53,28 @@ function changeRows(elementType, amount){
 
     // console.log(rows);
 }
+
+function getPayback(tazaInt,principal,cashflows) {
+    var i = 0;
+    for (; i < cashflows.length && principal>0; i++) {
+        const element = cashflows[i];
+        principal-=element;
+    }
+    return i-1; // I think
+}
+
+function clearRows(element){
+    // alert(findParentType($(this)));
+    $("."+findParentType($(element))+"-rows>div>input").val('');
+}
+
+function getNPV(tazaInt, principal, cashFlows) {
+    var npv = principal;
+  
+    for (var i = 0; i < cashFlows.length; i++) {
+      npv += cashFlows[i] / Math.pow(tazaInt / 100 + 1, i + 1);
+    }
+  
+    return npv;
+  }
 
