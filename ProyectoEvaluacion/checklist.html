@@ -1,0 +1,232 @@
+<html>
+    <head>
+        <title>Checklist</title>
+        <script type="text/javascript"></script> 
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <center>
+            <table border="3" width="60%" method="post">
+                <form action="" name="form1" method="get">
+                    <tr align="center">
+                        <td>Topic </td>
+                        <td>Question </td>
+                        <td>Answer </td>
+                    </tr>
+                    <tr align="left">
+                        <td>Strategy/Alignment</td>
+                        <td>What specific organization strategy does this project align with?</td>
+                        <td><input type="text" name="strat" id=1 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Driver</td>
+                        <td>What business problem does the project solve?</td>
+                        <td><input type="text" name="driver" id=2 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Success metrics</td>
+                        <td>How will measure success?</td>
+                        <td><input type="text" name="succmet" id=3  size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Sponsorship</td>
+                        <td>Who is the project sponsor?</td>
+                        <td><input type="text" name="sponsor"  id=4 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Risk</td>
+                        <td>What is the impact of not doing this project?</td>
+                        <td><input type="text" name="risk1" id=5 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Risk</td>
+                        <td>What is the project risk to our organization?</td>
+                        <td><input type="text" name="risk2" id=6 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Risk</td>
+                        <td>Where does the proposed project fit in our risk profile?</td>
+                        <td><input type="text" name="risk3" id=7 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Benefits, value</td>
+                        <td>What is the value of the project organization?</td>
+                        <td><input type="text" name="benef1" id=8 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Benefits, value</td>
+                        <td>When will the project shows result?</td>
+                        <td><input type="text" name="benef2" id=9 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Objectives</td>
+                        <td>What are the project objectives?</td>
+                        <td><input type="text" name="objctv" id=10 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Organization Culture</td>
+                        <td>Is our organization culture right for this type of project?</td>
+                        <td><input type="text" name="orgcult" id=11 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Resources</td>
+                        <td>Will internal resources be available for this project?</td>
+                        <td><input type="text" name="res" id=12 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Approach</td>
+                        <td>Will we build or buy?</td>
+                        <td>
+                            <table width="30%">
+                                <tr>
+                                    <td><input type="radio" name="appr" value="Build" required></td>
+                                    <td>Build</td>
+                                    <td><input type="radio" name="appr" value="Buy" required></td>
+                                    <td>Buy</td>
+                                    <td><input type="radio" name="appr" value="Both" required></td>
+                                    <td>Both</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Schedule</td>
+                        <td>How long will this project take?</td>
+                        <td><input type="text" name="sched1" id=13 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Schedule</td>
+                        <td>Is the timeline realistic?</td>
+                        <td>
+                            <table width="30%">
+                                <tr>
+                                    <td><input type="radio" name="sched2" value="1" required></td>
+                                    <td>Yes</td>
+                                    <td><input type="radio" name="sched2" value="2" required></td>
+                                    <td>No</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Training/Resources</td>
+                        <td>Will staff training be required?</td>
+                        <td><input type="text" name="train" id=14 dsize="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Finance/Portfolio</td>
+                        <td>What is the estimated cost of the project?</td>
+                        <td><input type="text" name="finan" id=15 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Portfolio</td>
+                        <td>Is this a new initiative or part of an existing initiative?</td>
+                        <td>
+                            <table width="30%">
+                                <tr>
+                                    <td><input type="radio" name="port1" value="New" required></td>
+                                    <td>New initiative</td>
+                                    <td><input type="radio" name="port1" value="Existing" required></td>
+                                    <td>Existing initiative</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr align="left">
+                        <td>Portfolio</td>
+                        <td>How does this project interact with current projects?</td>
+                        <td><input type="text" name="port2" id=16 size="40" maxlength="250" class="field" required></td>
+                    </tr>
+                    
+                    <tr align="left">
+                        <td>Technology</td>
+                        <td>Is the technology available or new?</td>
+                        <td>
+                            <table width="30%">
+                                <tr>
+                                    <td><input type="radio" name="tech" value="Available" required></td>
+                                    <td>Available</td>
+                                    <td><input type="radio" name="tech" value="New" required></td>
+                                    <td>New</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+            </table>
+                    <tr align="center">
+                        <td></td>
+                        <td><input type="reset" name="del" class="boton" value="Limpiar Forma"></td>
+                        <td><input type="submit" id="imp" name="imp" value="Imprimir Forma"></td>
+                    </tr>
+                </form>
+            
+        </center>
+        <script>
+            (function()
+            {
+                var formulario =document.getElementsByName('form1')[0],
+                elementos = form1.elements,
+                boton = document.getElementById("imp");
+
+                var validarApproach = function()
+                {
+                    if(form1.appr[0].checked == true || form1.appr[1].checked == true || form1.appr[2].checked == true)
+                    {}
+                    else
+                    {
+                        e.preventDefault();
+                    }
+                }
+
+                var validarRadio = function()
+                {
+                    if(form1.sched2[0].checked == true || form1.sched2[1].checked == true)
+                    {}
+                    else
+                    {
+                        e.preventDefault();
+                    }
+                }
+
+                var validarRadio2 = function()
+                {
+                    if(form1.tech[0].checked == true || form1.tech[1].checked == true)
+                    {}
+                    else
+                    {
+                        e.preventDefault();
+                    }
+                }
+
+                var validar = function(e)
+                {
+                    validarApproach(e);
+                    validarRadio(e);
+                    validarRadio2(e);
+                    window.print();
+                }
+
+                form1.addEventListener("submit", validar);
+            }())
+
+        </script>
+    </body>
+</html>

@@ -5,6 +5,10 @@ $(".tab").click(function () {
     $(".calculator." + $(this).attr('class').split(/\s+/)[0]).show("slow", function () { });
 });
 
+$(".checklist.calculator").load("checklist.html");
+// console.log("HELLO");
+
+// console.log($(".checklist.calculator"));
 var rowPayback = `
 <div class="whole_row">
     <div class="input-group mb-3">
@@ -204,10 +208,10 @@ function calculatePayback(){
         var inputs = $(element).children("div").children("input");
         var outflow = inputs.eq(0).val();
         var inflow = inputs.eq(1).val();
-        var total_flow=(inflow-outflow)/Math.pow(1+(tax/100),i);
+        var total_flow=(inflow-outflow)/Math.pow(1+(tax/100),i+1);
         principal -= total_flow;
         if(-principal >= 0 && !found){
-            alert(i+" is first break even period");
+            alert((i+1)+" is first break even period");
             found = true;
         }
         console.log(inputs.eq(2).val(""+-principal));
