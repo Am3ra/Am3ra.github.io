@@ -64,6 +64,12 @@ input{
 .checklist{
     background-color: #b13133;
 }
+#CheckListBody{
+    background-color: #ffffff;
+}
+.PSM{
+    background-color: #604793;
+}
 
 .rows{
     padding: 5% 10%;
