@@ -189,14 +189,39 @@ function clearRows(element) {
     $("." + findParentType($(element)) + "-rows>div>input").val('');
 }
 
-function getNPV(tazaInt, principal, cashFlows) {
-    var npv = principal;
+function getNPV(tazaInt, i, cashFlow, tax) {
+    return  (cashFlow*( 1-tax)) / Math.pow(tazaInt + 1, i + 1);
+}
 
-    for (var i = 0; i < cashFlows.length; i++) {
-        npv += cashFlows[i] / Math.pow(tazaInt / 100 + 1, i + 1);
-    }
+function calculateNPV(){
+    var principal = - $("#PrincipalNPV").val();
+    var tax = $("#ImpuestoNPV").val()/100;
+    var tazaInt = $("#TazaNPV").val();
+    var inflacion = $("#InflacionNPV").val();
 
-    return npv;
+    var tazaIntf = tazaInt/100 + inflacion/100 + ((tazaInt/100)*(inflacion/100));
+
+    console.log("Principal: "+principal+", tazaf: "+tazaIntf);
+    
+
+    $(".NPV-rows>.whole_row").each(function(i,element){
+        var inputs = $(element).children("div").children("input");
+        var outflow = inputs.eq(0).val();
+        var inflow = inputs.eq(1).val();
+        var total_flow=(inflow-outflow)
+        
+        var pv = getNPV(tazaIntf,i,total_flow,tax);
+        inputs.eq(2).val(""+(inflow-outflow));
+        inputs.eq(3).val(""+pv);
+
+        principal= principal + pv;
+        console.log("inflow: "+inflow+", outflow: "+outflow+", total: "+total_flow+", pv: "+pv+", principal: "+principal);
+        // inputs.eq(2).value(inflow-outflow);
+        
+        // console.log($(element).children("div").children("input").eq(1).val());
+    });
+
+    $("#resultNPV").val(""+principal);
 }
 
 function calculatePayback(){
@@ -221,3 +246,4 @@ function calculatePayback(){
     });
     // console.log($(".payback-rows>.whole_row>div>input").eq(0).val());
 }
+

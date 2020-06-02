@@ -81,10 +81,10 @@
                     <label for="ImpuestoNPV">Impuesto:</label>
                     <input type="number" name="ImpuestoNPV" id="ImpuestoNPV" min="0" max="100" value="0" required>
                     <label for="InflacionNPV">Inflacion:</label>
-                    <input type="number" name="InflacionNPV" id="InflacionNPV" min="0" value="0" required>
+                    <input type="number" name="InflacionNPV" id="InflacionNPV" min="0" max="100" value="0" required>
                 </div>
                 <div class="NPV buttons">
-                    <button class="btn btn-primary">Calcular</button>
+                    <button onclick="calculateNPV()" class="btn btn-primary">Calcular</button>
                     <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
                 </div>
             </div>
