@@ -83,12 +83,9 @@ var rowNPV = `
 var rowdepreciation = `
 <div class="whole_row">
     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-            <span class="input-group-text">$</span>
-        </div>
         <input readonly type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
         <div class="input-group-append">
-            <span class="input-group-text">.00</span>
+            <span class="input-group-text">%</span>
         </div>
     </div>
     <div class="input-group mb-3">
@@ -143,8 +140,8 @@ function findParentType(element) {
 }
 
 function changeRows(elementType, amount) {
-    
-    var row_type="";
+
+    var row_type = "";
     if (elementType == "payback")
         row_type = rowPayback;
     else if (elementType == "NPV")
@@ -190,60 +187,86 @@ function clearRows(element) {
 }
 
 function getNPV(tazaInt, i, cashFlow, tax) {
-    return  (cashFlow*( 1-tax)) / Math.pow(tazaInt + 1, i + 1);
+    return (cashFlow * (1 - tax)) / Math.pow(tazaInt + 1, i + 1);
 }
 
-function calculateNPV(){
+function calculateNPV() {
     var principal = - $("#PrincipalNPV").val();
-    var tax = $("#ImpuestoNPV").val()/100;
+    var tax = $("#ImpuestoNPV").val() / 100;
     var tazaInt = $("#TazaNPV").val();
     var inflacion = $("#InflacionNPV").val();
 
-    var tazaIntf = tazaInt/100 + inflacion/100 + ((tazaInt/100)*(inflacion/100));
+    var tazaIntf = tazaInt / 100 + inflacion / 100 + ((tazaInt / 100) * (inflacion / 100));
 
-    console.log("Principal: "+principal+", tazaf: "+tazaIntf);
-    
+    console.log("Principal: " + principal + ", tazaf: " + tazaIntf);
 
-    $(".NPV-rows>.whole_row").each(function(i,element){
+
+    $(".NPV-rows>.whole_row").each(function (i, element) {
         var inputs = $(element).children("div").children("input");
         var outflow = inputs.eq(0).val();
         var inflow = inputs.eq(1).val();
-        var total_flow=(inflow-outflow)
-        
-        var pv = getNPV(tazaIntf,i,total_flow,tax);
-        inputs.eq(2).val(""+(inflow-outflow));
-        inputs.eq(3).val(""+pv);
+        var total_flow = (inflow - outflow)
 
-        principal= principal + pv;
-        console.log("inflow: "+inflow+", outflow: "+outflow+", total: "+total_flow+", pv: "+pv+", principal: "+principal);
+        var pv = getNPV(tazaIntf, i, total_flow, tax);
+        inputs.eq(2).val("" + (inflow - outflow));
+        inputs.eq(3).val("" + pv);
+
+        principal = principal + pv;
+        console.log("inflow: " + inflow + ", outflow: " + outflow + ", total: " + total_flow + ", pv: " + pv + ", principal: " + principal);
         // inputs.eq(2).value(inflow-outflow);
-        
+
         // console.log($(element).children("div").children("input").eq(1).val());
     });
 
-    $("#resultNPV").val(""+principal);
+    $("#resultNPV").val("" + principal);
 }
 
-function calculatePayback(){
+function calculatePayback() {
     //get principal, tax
     var principal = $("#PrincipalPayback").val();
     var tax = $("#TazaPayback").val();
     var found = false;
-    $(".payback-rows>.whole_row").each(function(i,element){
+    $(".payback-rows>.whole_row").each(function (i, element) {
         var inputs = $(element).children("div").children("input");
         var outflow = inputs.eq(0).val();
         var inflow = inputs.eq(1).val();
-        var total_flow=(inflow-outflow)/Math.pow(1+(tax/100),i+1);
+        var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
         principal -= total_flow;
-        if(-principal >= 0 && !found){
-            alert((i+1)+" is first break even period");
+        if (-principal >= 0 && !found) {
+            alert((i + 1) + " is first break even period");
             found = true;
         }
-        console.log(inputs.eq(2).val(""+-principal));
-        
+        console.log(inputs.eq(2).val("" + -principal));
+
         // inputs.eq(2).value(inflow-outflow);
         // console.log($(element).children("div").children("input").eq(1).val());
     });
     // console.log($(".payback-rows>.whole_row>div>input").eq(0).val());
 }
 
+function calculateStraight() {
+    var principal = $("#Principaldepreciation").val();
+    var tax = $("#Impuestodepreciation").val();
+    var salvage = $("#salvagedepreciation").val();
+    var periods = $("#Periododepreciation").val();
+
+    dep = (principal - salvage) / periods;
+    dep_rate = 100 * (dep / principal)
+
+
+    $(".depreciation-rows>.whole_row").each(function (i, element) {
+        var inputs = $(element).children("div").children("input");
+        // var outflow = inputs.eq(0).val();
+        // var inflow = inputs.eq(1).val();
+        inputs.eq(0).val("" + dep);
+        var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
+
+        console.log(inputs.eq(2).val("" + -principal));
+
+    });
+}
+
+
+function openExcel() {
+    window.open("test.xlsx");
+}

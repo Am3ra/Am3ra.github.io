@@ -102,3 +102,9 @@ input{
     font-size: large;
     font-weight: bolder;
 }
+
+.PSM.calculator{
+    padding: 10vw;
+    display: flex;
+    justify-content: center;
+}
