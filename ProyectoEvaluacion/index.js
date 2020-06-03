@@ -218,6 +218,17 @@ function getNPV(tazaInt, i, cashFlow, tax) {
 }
 
 function calculateNPV() {
+    var err = false;
+    $.each($(".NPV.calculator>div>div>input"), function (indexInArray, valueOfElement) { 
+        if(!valueOfElement.checkValidity()){
+            // alert(indexInArray,valueOfElement);
+            err = true;
+            return;
+        }
+    });
+    if(err){
+        return;
+    }
     var tax = $("#ImpuestoNPV").val() / 100;
     var tazaInt = $("#TazaNPV").val();
     var inflacion = $("#InflacionNPV").val();
@@ -249,6 +260,17 @@ function calculateNPV() {
 }
 
 function calculatePayback() {
+    var err = false;
+    $.each($(".payback.calculator>div>div>input"), function (indexInArray, valueOfElement) { 
+        if(!valueOfElement.checkValidity()){
+            // alert(indexInArray,valueOfElement);
+            err = true;
+            return;
+        }
+    });
+    if(err){
+        return;
+    }
     //get principal, tax
     var principal = $("#PrincipalPayback").val();
     var tax = $("#TazaPayback").val();
@@ -274,6 +296,18 @@ function calculatePayback() {
 }
 
 function calculateStraight() {
+    var err = false;
+    $.each($(".depreciation.calculator>div>div>input"), function (indexInArray, valueOfElement) { 
+        if(!valueOfElement.checkValidity()){
+            // alert(indexInArray,valueOfElement);
+            err = true;
+            return;
+        }
+    });
+    if(err){
+        return;
+    }
+
     var principal = $("#Principaldepreciation").val();
     var tax = $("#Impuestodepreciation").val();
     var salvage = $("#salvagedepreciation").val();
@@ -309,6 +343,20 @@ function openExcel() {
 } 
 
 function calculateMACRS() {
+    var err = false;
+    $.each($(".depreciation.calculator>div>div>input"), function (indexInArray, valueOfElement) { 
+        if(!valueOfElement.checkValidity()){
+            // alert(indexInArray,valueOfElement);
+            err = true;
+            return;
+        }
+    });
+    if(err){
+        return;
+    }
+
+
+
     var principal = $("#Principaldepreciation").val();
     var tax = $("#Impuestodepreciation").val();
     var salvage = $("#salvagedepreciation").val();
