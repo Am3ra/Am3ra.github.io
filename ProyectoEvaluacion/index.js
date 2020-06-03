@@ -190,8 +190,9 @@ function getPayback(tazaInt, principal, cashflows) {
 }
 
 function clearRows(element) {
-    // alert(findParentType($(this)));
-    $("." + findParentType($(element)) + "-rows>div>input").val('');
+    
+    alert(findParentType($(element)));
+    $("." + findParentType($(element)) + "-rows>div>div>input").val('');
 }
 
 function getNPV(tazaInt, i, cashFlow, tax) {
