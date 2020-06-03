@@ -119,6 +119,12 @@ var rowdepreciation = `
         </div>
         <input readonly type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
     </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+        </div>
+        <input readonly type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+    </div>
 </div>
 `;
 
@@ -258,6 +264,7 @@ function calculateStraight() {
     var tax = $("#Impuestodepreciation").val();
     var salvage = $("#salvagedepreciation").val();
     var periods = $("#Periododepreciation").val();
+    var ano = $("#anodep").val();
 
     dep = (principal - salvage) / periods;
     dep_rate = 100 * (dep / principal)
@@ -275,6 +282,7 @@ function calculateStraight() {
         inputs.eq(2).val("" + total_dep);
         inputs.eq(3).val("" + principal-total_dep);
         inputs.eq(4).val("" + (principal-total_dep)*(tax/100));
+        inputs.eq(5).val(""+(((ano/1)+i)));
         // var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
 
         // console.log(inputs.eq(2).val("" + -principal));
@@ -292,6 +300,8 @@ function calculateMACRS() {
     var salvage = $("#salvagedepreciation").val();
     var periods = $("#Periododepreciation").val();
     var option = $("#sel1").val();
+    var ano = $("#anodep").val();
+
     // console.log(option);
 
     var total_dep = 0;
@@ -310,15 +320,18 @@ function calculateMACRS() {
     // for
     $(".depreciation-rows>.whole_row").each(function (i, element) {
         var inputs = $(element).children("div").children("input");
-        total_dep += dep;
+        
         // var outflow = inputs.eq(0).val();
         // var inflow = inputs.eq(1).val();
-        var dep = deps[i]*(principal-salvage);
+        var dep = deps[i]*(principal-salvage)/100;
+        total_dep += dep;
         inputs.eq(0).val("" + deps[i]);
-        inputs.eq(1).val("" + dep*principal);
+        inputs.eq(1).val("" + dep);
         inputs.eq(2).val("" + total_dep);
         inputs.eq(3).val("" + principal-total_dep);
         inputs.eq(4).val("" + (principal-total_dep)*(tax/100));
+        inputs.eq(5).val(""+(((ano/1)+i)));
+
         // var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
 
         // console.log(inputs.eq(2).val("" + -principal));
