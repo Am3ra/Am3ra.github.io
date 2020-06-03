@@ -114,3 +114,8 @@ input{
     margin: 0 auto 10vh;
     /* justify-self: center; */
 }
+
+.whole_row>h2{
+    margin-right: 10px;
+    width: 20px;
+}
