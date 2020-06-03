@@ -108,3 +108,9 @@ input{
     display: flex;
     justify-content: center;
 }
+
+.print{
+    display: block;
+    margin: 0 auto 10vh;
+    /* justify-self: center; */
+}
