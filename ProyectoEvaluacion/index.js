@@ -306,5 +306,21 @@ function calculateMACRS() {
     // console.log(deps);
 
     // for
+    $(".depreciation-rows>.whole_row").each(function (i, element) {
+        var inputs = $(element).children("div").children("input");
+        total_dep += dep;
+        // var outflow = inputs.eq(0).val();
+        // var inflow = inputs.eq(1).val();
+        var dep = deps[i]*(principal-salvage);
+        inputs.eq(0).val("" + deps[i]);
+        inputs.eq(1).val("" + dep*principal);
+        inputs.eq(2).val("" + total_dep);
+        inputs.eq(3).val("" + principal-total_dep);
+        inputs.eq(4).val("" + (principal-total_dep)*(tax/100));
+        // var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
+
+        // console.log(inputs.eq(2).val("" + -principal));
+
+    });
     
 }
