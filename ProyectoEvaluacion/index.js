@@ -154,7 +154,7 @@ function changeRows(elementType, amount) {
         rows[elementType] = amount;
         $("." + elementType + "-rows").append(row_type.repeat(amount));
         $.each($("." + elementType + "-rows>.whole_row"),function( i, val ) {
-            $(val).append("<h2>"+(i+1)+"</h2>");
+            $(val).prepend("<h2>"+(i+1)+"</h2>");
         });
 
     }
@@ -164,11 +164,11 @@ function changeRows(elementType, amount) {
         //need more rows
         
         $.each($("." + elementType + "-rows>.whole_row"),function( i, val ) {
-            $(val).children().last().remove()
+            $(val).children().first().remove()
         });
         $("." + elementType + "-rows").append(row_type.repeat(amount - current));
         $.each($("." + elementType + "-rows>.whole_row"),function( i, val ) {
-            $(val).append("<h2>"+(i+1)+"</h2>");
+            $(val).prepend("<h2>"+(i+1)+"</h2>");
         });
         
 
