@@ -259,6 +259,7 @@ function calculatePayback() {
         var inflow = inputs.eq(1).val();
         var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
         principal -= total_flow;
+        inputs.eq(2).css("background-color","white");
         if (-principal >= 0 && !found) {
             // alert((i + 1) + " is first break even period");
 
