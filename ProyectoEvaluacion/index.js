@@ -6,9 +6,7 @@ $(".tab").click(function () {
 });
 
 $(".checklist.calculator").load("checklist.html");
-// console.log("HELLO");
 
-// console.log($(".checklist.calculator"));
 var rowPayback = `
 <div class="whole_row">
     <div class="input-group mb-3">
@@ -120,9 +118,6 @@ var rowdepreciation = `
             <span class="input-group-text">$</span>
         </div>
         <input readonly type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-        <div class="input-group-append">
-            <span class="input-group-text">.00</span>
-        </div>
     </div>
 </div>
 `;
@@ -252,21 +247,50 @@ function calculateStraight() {
 
     dep = (principal - salvage) / periods;
     dep_rate = 100 * (dep / principal)
-
+    total_dep = 0;
+    console.log(dep);
+    
 
     $(".depreciation-rows>.whole_row").each(function (i, element) {
         var inputs = $(element).children("div").children("input");
+        total_dep += dep;
         // var outflow = inputs.eq(0).val();
         // var inflow = inputs.eq(1).val();
-        inputs.eq(0).val("" + dep);
-        var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
+        inputs.eq(0).val("" + dep_rate);
+        inputs.eq(1).val("" + dep*principal);
+        inputs.eq(2).val("" + total_dep);
+        inputs.eq(3).val("" + principal-total_dep);
+        inputs.eq(4).val("" + (principal-total_dep)*(tax/100));
+        // var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
 
-        console.log(inputs.eq(2).val("" + -principal));
+        // console.log(inputs.eq(2).val("" + -principal));
 
     });
 }
 
-
 function openExcel() {
     window.open("test.xlsx");
+} 
+
+function calculateMACRS() {
+    var principal = $("#Principaldepreciation").val();
+    var tax = $("#Impuestodepreciation").val();
+    var salvage = $("#salvagedepreciation").val();
+    var periods = $("#Periododepreciation").val();
+    var option = $("#sel1").val();
+    // console.log(option);
+
+    $("#Periododepreciation").val(""+(option+1));
+    changeRows("depreciation",option+1);
+    var cats= {
+        3:[33.33, 44.45, 14.81, 7.41],
+        5:[20, 32, 19.20, 11.52, 11.52, 5.76],
+        7:[14.29, 24.49, 17.49, 12.49, 8.93, 8.92, 8.93, 4.46],
+        10:[10, 18, 14.4, 11.52, 9.22, 7.37, 6.55, 6.55, 6.56, 6.55, 3.28]
+    };
+    deps = cats[""+option];
+    // console.log(deps);
+
+    // for
+    
 }

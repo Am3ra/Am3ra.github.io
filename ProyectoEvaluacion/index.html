@@ -17,11 +17,14 @@
             <img src="https://pngimage.net/wp-content/uploads/2018/06/logo-tecnologico-de-monterrey-png.png"
                 alt="Logo Tecnologico de Monterrey" class="logo">
             <h1 class="title">MATERIA : Evaluacion y administracion de proyectos</h1>
-            <h1>PROYECTO: Project Portfolio Evaluation Tool</h1>
+            <h1>PROYECTO:</h1>
+            <input type="text">
         </div>
         <div>
-            <h3>Equipo numero 2</h3>
+            <h3>Equipo numero:</h3>
+            <input type="text">
             <h3>Nombre evaluador: </h3>
+            <input type="text">
         </div>
     </div>
     <div class="tabs">
@@ -128,9 +131,9 @@
                     </select>
                 </div>
                 <div class="depreciation buttons">
-                    <button class="btn btn-primary">Calcular Straight Line</button>
-                    <button class="btn btn-primary">Calcular MACRS</button>
-                    <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button>
+                    <button onclick="calculateStraight()" class="btn btn-primary">Calcular Straight Line</button>
+                    <button onclick="calculateMACRS()" class="btn btn-primary">Calcular MACRS</button>
+                    <!-- <button onclick="clearRows(this)" class="btn btn-secondary">Limpiar datos</button> -->
                 </div>
             </div>
             <div class="headers">
