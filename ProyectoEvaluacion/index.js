@@ -248,11 +248,12 @@ function calculatePayback() {
         var total_flow = (inflow - outflow) / Math.pow(1 + (tax / 100), i + 1);
         principal -= total_flow;
         if (-principal >= 0 && !found) {
-            alert((i + 1) + " is first break even period");
+            // alert((i + 1) + " is first break even period");
+
+            inputs.eq(2).css("background-color","green");
             found = true;
         }
         console.log(inputs.eq(2).val("" + -principal));
-
         // inputs.eq(2).value(inflow-outflow);
         // console.log($(element).children("div").children("input").eq(1).val());
     });
