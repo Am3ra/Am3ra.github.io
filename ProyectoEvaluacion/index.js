@@ -147,12 +147,25 @@ function changeRows(elementType, amount) {
     if (rows[elementType] == undefined) {
         rows[elementType] = amount;
         $("." + elementType + "-rows").append(row_type.repeat(amount));
+        $.each($("." + elementType + "-rows>.whole_row"),function( i, val ) {
+            $(val).append("<h2>"+i+"</h2>");
+        });
+
     }
     // alert("HELLO");
     var current = rows[elementType];
     if (current < amount) {
         //need more rows
+        
+        $.each($("." + elementType + "-rows>.whole_row"),function( i, val ) {
+            $(val).children().last().remove()
+        });
         $("." + elementType + "-rows").append(row_type.repeat(amount - current));
+        $.each($("." + elementType + "-rows>.whole_row"),function( i, val ) {
+            $(val).append("<h2>"+i+"</h2>");
+        });
+        
+
         // alert("Row increased");
         rows[elementType] = amount;
     } else if (current > amount) {
