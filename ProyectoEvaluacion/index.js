@@ -261,7 +261,7 @@ function calculateStraight() {
 
     dep = (principal - salvage) / periods;
     dep_rate = 100 * (dep / principal)
-    total_dep = 0;
+    var total_dep = 0;
     console.log(dep);
     
 
@@ -293,6 +293,8 @@ function calculateMACRS() {
     var periods = $("#Periododepreciation").val();
     var option = $("#sel1").val();
     // console.log(option);
+
+    var total_dep = 0;
 
     $("#Periododepreciation").val(""+(1+parseInt(option)));
     changeRows("depreciation",(1+parseInt(option)));
