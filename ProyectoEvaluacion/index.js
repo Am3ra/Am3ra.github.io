@@ -294,8 +294,8 @@ function calculateMACRS() {
     var option = $("#sel1").val();
     // console.log(option);
 
-    $("#Periododepreciation").val(""+(option+1));
-    changeRows("depreciation",option+1);
+    $("#Periododepreciation").val(""+(1+parseInt(option)));
+    changeRows("depreciation",(1+parseInt(option)));
     var cats= {
         3:[33.33, 44.45, 14.81, 7.41],
         5:[20, 32, 19.20, 11.52, 11.52, 5.76],
