@@ -191,7 +191,7 @@ function getPayback(tazaInt, principal, cashflows) {
 
 function clearRows(element) {
     
-    alert(findParentType($(element)));
+    // alert(findParentType($(element)));
     $("." + findParentType($(element)) + "-rows>div>div>input").val('');
 }
 
