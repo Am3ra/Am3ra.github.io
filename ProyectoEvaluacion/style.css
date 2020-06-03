@@ -16,7 +16,7 @@ html{
 .tabs {
     display: flex;
     justify-content: space-between;
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 .tab1 {

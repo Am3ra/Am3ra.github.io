@@ -3,6 +3,7 @@ $(".tab").click(function () {
     $(".calculator").hide("slow", function () { });
     //show only chosen calculator.
     $(".calculator." + $(this).attr('class').split(/\s+/)[0]).show("slow", function () { });
+    $(".infoText").html(eval("desc"+$(this).attr('class').split(/\s+/)[0]));
 });
 
 $(".checklist.calculator").load("checklist.html");
@@ -130,6 +131,13 @@ var rowdepreciation = `
 
 var rows = {};
 
+var descpayback = `Encuentra el primer periodo dónde el cash flow cumulativo sea positivo.`;
+var descNPV = `Compara el valor total del income contra el valor presente de todos los gastos.`;
+var descdepreciation= `Encuentra el valor futuro de un activo por MACRS o Straight Line`;
+var descchecklist=`Utiliza preguntas para determinar que tan viable es un posible proyecto`;
+var descPSM=`Se asigna un peso a cada criterio y se crea una matriz para determinar la viabilidad de un proyecto`;
+
+
 $(".periodsInput").change(function () {
     var parentType = findParentType($(this));
     if (document.getElementById("Periodo" + parentType).checkValidity())
@@ -144,11 +152,15 @@ function changeRows(elementType, amount) {
 
     var row_type = "";
     if (elementType == "payback")
-        row_type = rowPayback;
+       { row_type = rowPayback;}
     else if (elementType == "NPV")
+    {
         row_type = rowNPV;
+    }
     else if (elementType == "depreciation")
+    {
         row_type = rowdepreciation;
+    }
 
     if (rows[elementType] == undefined) {
         rows[elementType] = amount;
