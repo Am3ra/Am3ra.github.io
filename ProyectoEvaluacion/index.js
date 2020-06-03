@@ -206,10 +206,10 @@ function getNPV(tazaInt, i, cashFlow, tax) {
 }
 
 function calculateNPV() {
-    var principal = - $("#PrincipalNPV").val();
     var tax = $("#ImpuestoNPV").val() / 100;
     var tazaInt = $("#TazaNPV").val();
     var inflacion = $("#InflacionNPV").val();
+    var principal = (- $("#PrincipalNPV").val())*(1+tax);
 
     var tazaIntf = tazaInt / 100 + inflacion / 100 + ((tazaInt / 100) * (inflacion / 100));
 
