@@ -326,7 +326,7 @@ function calculateStraight() {
         // var outflow = inputs.eq(0).val();
         // var inflow = inputs.eq(1).val();
         inputs.eq(0).val("" + dep_rate);
-        inputs.eq(1).val("" + dep*principal);
+        inputs.eq(1).val("" + dep);
         inputs.eq(2).val("" + total_dep);
         inputs.eq(3).val("" + principal-total_dep);
         inputs.eq(4).val("" + (principal-total_dep)*(tax/100));
