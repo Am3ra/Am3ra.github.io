@@ -1,354 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="https://avatars1.githubusercontent.com/u/17537489?v=3&u=60fe472a2ad75431c7ad748b70d85a142f5c7d98&s">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="index.js" charset="utf-8"></script>
+  <!-- <script src="index.js" charset="utf-8"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js"></script>
 </head>
 
-<nav class="navbar navbar-inverse" id="navbar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#background0"> Alan </a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li>
-        <a href="#background1">Who I am</a>
-      </li>
-      <li>
-        <a href="#background3">Education</a>
-      </li>
-      <li>
-        <a href="#background4">Contact me!</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+<body>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="0">
-
-  <div class="container-fluid" id="background0">
-    <div id="main-title">
-      <h1>Alan Macedo Esparza</h1>
+  <div id="background">
+    <div class="info_container" >
+      <h1>Alan Macedo</h1>
       <hr>
-      <p>I am a programmer, photographer, and a curious person.</p>
+      <ul>
+        <li><a href="/thoughts">blog</a></li>
+        <li><a href="twitter.com/alanmacedo">twitter</a></li>
+        <li><a href="mailto:me@alanmacedo.com">email</a></li>
+        <li><a href="linkedin.com/alanmacedoe">linkedin</a></li>
+      </ul>
     </div>
-  </div>
-
-  <div class="container-fluid" id="background1">
-    <div class="title center-block">
-      <h2 class="text-center">Who am I?</h2>
-      <hr class="style-eight">
-    </div>
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Where I've been:</h2>
-          <h4>
-            <i> Until today, I've done many things, however, these are the most important:</i>
-          </h4>
-          <div class="text-left">
-            <li>I've lived designed several sites for businesses, including tourism and dentistry.</li>
-            <li>Living in three countries in a 15 year period, learning to work in multicultural environments.</li>
-            <li>Overall, although I'm only 18 years old, I've been programming for 4, giving me plenty experience.</li>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <h2>Where I am now:</h2>
-          <h4 class="text-left">
-            <i>Today, I am a free-lance programmer, with a specialty in website design. Currently, I am studying a degree in
-              computer sciences. Apart from programming, I have a deep interest in recent technologies such as VR and Hardware
-              in general.</i>
-          </h4>
-        </div>
-      </div>
-      <div class="row container text-center middle">
-        <h2>Where I want to be: </h2>
-        <h4 class="text-center">
-          <i> In 5 years, I see myself working at a startup or company, although in 15 I see myself already having my own.</i>
-        </h4>
-      </div>
-    </div>
-    <div class="title center-block text-center">
-      <h2 class="text-center">Skills:</h2>
-      <hr class="style-eight">
-    </div>
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-6 text-center">
-          <h2 class="text-center">Speaking Languages:</h2>
-          <div class="row container-fluid">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 text-justify">
-              <div>
-                <h4 class="justiffy">
-                  <i>English:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>Spanish:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>Portuguese:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>French:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-            </div>
-            <div class="col-md-3"></div>
-          </div>
-        </div>
-        <div class="col-md-6 text-center">
-          <h2 class="text-center">Programming Languages:</h2>
-          <div class="row container-fluid">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 text-justify">
-              <div>
-                <h4 class="justiffy">
-                  <i>CSS/HTML:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>JavaScript:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>Java</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-              <div>
-                <h4 class="justiffy">
-                  <i>Python:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-
-              <div>
-                <h4 class="justiffy">
-                  <i>C/C++:</i>
-                  <div class="jiffy">
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                    <span class="glyphicon glyphicon-plus-sign wrong"></span>
-                  </div>
-                </h4>
-              </div>
-            </div>
-            <div class="col-md-3"></div>
-          </div>
-        </div>
-      </div>
-      <div class="row bottom-row container text-center middle">
-        <h2>Other skills: </h2>
-        <h4 class="text-center">
-          Among other skills, I'm an experienced debater and speaker, winning regional and state competitions in Texas. Apart from
-          this, throughout most of my schooling I have been a member of the student council and other leadership groups,
-          giving me a strong background in teamwork and leadership.
-        </h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid" id="background2">
-    <h2 class="title caption">I work well, so you don't have to</h2>
-  </div>
-
-  <div class="container-fluid" id="background2_5">
-    <div class="title center-block">
-      <h2 class="text-center">My Projects:</h2>
-      <hr class="style-eight">
-    </div>
-    <div class="projects">
-      <!-- First website, weather, wikipedia viewer, random quote machine, Twitch API project -->
-      <div class="projectContainer">
-        <h4 class="text-center">First Website</h4>
-        <iframe src="Tribute Page/index.html" frameborder="0"></iframe>
-        <div class="buttons">
-          <a href="Tribute Page/index.html" class="btn btn-default ">Visit Project</a>
-        </div>
-      </div>
-      <div class="projectContainer">
-        <h4 class="text-center">Weather</h4>
-        <iframe src="weather/index.html" frameborder="0"></iframe>
-        <div class="buttons">
-          <a href="weather/index.html" class="btn btn-default center-block">Visit Project</a>
-        </div>
-      </div>
-      <div class="projectContainer">
-        <h4 class="text-center">Wikipedia Viewer</h4>
-        <iframe src="Wikipedia Viewer/index.html" frameborder="0"></iframe>
-        <div class="buttons">
-          <a href="Wikipedia Viewer/index.html" class="btn btn-default center-block">Visit Project</a>
-        </div>
-      </div>
-      <div class="projectContainer">
-        <h4 class="text-center">Random Quote Machine</h4>
-        <iframe src="Random quote Machine/qoute.html" frameborder="0"></iframe>
-        <div class="buttons">
-          <a href="Random quote Machine/qoute.html" class="btn btn-default center-block">Visit Project</a>
-        </div>
-      </div>
-      <div class="projectContainer">
-        <h4 class="text-center">Twitch API check</h4>
-        <iframe src="Twitch API/index.html" frameborder="0"></iframe>
-        <div class="buttons">
-          <a href="Twitch API/index.html" class="btn btn-default center-block">Visit Project</a>
-        </div>
-      </div>
-      <div class="projectContainer">
-        <h4 class="text-center">Dashboard</h4>
-        <iframe src="Dashboard/dashboard.html" frameborder="0"></iframe>
-        <div class="buttons">
-          <a href="Dashboard/dashboard.html" class="btn btn-default center-block">Visit Project</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid" id="background3">
-    <div class="title center-block">
-      <h2 class="text-center">My education:</h2>
-      <hr class="style-eight">
-    </div>
-
-
-    <div class="row text-center center-block">
-      <div class="col-md-6 text-center center-block">
-        <h2 class="text-center">Scholarly education:</h2>
-        <div class="col-md-3"></div>
-        <div class="col-md-7 text-justify">
-          <ul class="text-left">
-            <li>Currently studying Computer Sciences.</li>
-            <li>Completed International Baccalaureate Diploma</li>
-            <li>2 year degree including the following Higher Level courses:</li>
-            <ul class="text-left">
-              <li>Business Management</li>
-              <li>Design Technologies</li>
-              <li>Mathematics</li>
-              <li>Literature</li>
-              <li>Information Technologies</li>
-            </ul>
-          </ul>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-      <div class="col-md-6 text-center">
-        <h2 class="text-center">Personal Education:</h2>
-        <div class="col-md-3"></div>
-        <div class="col-md-7 text-justify">
-          <ul>
-            <li>
-              <a href="https://www.freecodecamp.org/am3ra">Free Code Camp's </a>Front End Web Dev course (250 Hours currently)</li>
-            <li>Extensive work in front end development, doing work for various clients thus far</li>
-            <li>Python courses, leading to a good understanding of the language</li>
-            <li>Photography courses, 15 years of experience.</li>
-            <li>Competitive sailing!</li>
-          </ul>
-        </div>
-        <div class="col-md-2"></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid" id="background4">
-    <div class="title center-block">
-      <h2 class="text-center">Contact Me!</h2>
-      <hr class="style-eight">
-    </div>
-    <div class="center-block title" style="font-size:15vw;height:70vh;">
-      <a href="https://www.facebook.com/jp2kk2" class="fa fa-facebook"></a>
-      <a href="https://twitter.com/jp2kk2" class="fa fa-twitter"></a>
-      <a href="https://plus.google.com/u/1/111486847434069060526" class="fa fa-google"></a>
-      <a href="https://www.linkedin.com/in/alan-macedo-esparza-194a42152/" class="fa fa-linkedin"></a>
-      <a href="https://www.github.com/am3ra" class="fa fa-github"></a>
-      <!--<a href="freecodecamp.com/am3ra" class="fa-free-code-camp fa" style="font-size:13vw;padding-top:30px;padding-bottom:30px;"></a> -->
-    </div>
-
   </div>
 
 </body>
-
-<footer>
+<!-- <footer>
   <div class="footsy">
     <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="I mean it!"></img>
     <p>By Alan Macedo Esparza</p>
   </div>
-</footer>
+</footer> -->
 
 <!-- WOW!
 
@@ -361,5 +47,22 @@
     </div>
 
 -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js"></script>
+  <script src="script.js"></script> -->
 
+
+  <script>
+  VANTA.TRUNK({
+    el: "#background",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    spacing: 4.50,
+    chaos: 8.00
+  })
+  </script>
 </html>
