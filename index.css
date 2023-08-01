@@ -48,6 +48,15 @@ table {
 }
 
 /* END RESET */
+ body{
+	height: 100vh;
+ }
+
+#background{
+	/* height: 100vh; */
+	width: 100vw;
+	height: 100vh;
+}
 
 .glassmorphic{
 	background: rgba(255,255,255,0.05);
@@ -60,16 +69,18 @@ table {
 
 .info_container{
 	width: fit-content;
-	height: 500px;
+	/* height: 500px; */
 	color: white;
 	top: 20%;
-	left: 100px;
-	padding: 30px
+	/* left: 20%; */
+	padding: 30px;
+	padding-left: 20%;
 }
 
 .info_container h1{
 	font-size: 50px;
 	margin: 0 auto;
+	overflow-wrap: normal;
 	/* text-align: center; */
 	color: whitesmoke	;
 	/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
@@ -98,7 +109,3 @@ table {
 	color: white;
 }
 
-#background{
-	height: 100vh;
-	width: 100vw;
-}
